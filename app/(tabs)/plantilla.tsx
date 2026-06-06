@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, FlatList, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-// 1. ¡NUEVO! Definimos la estructura exacta de nuestros datos para TypeScript
+//Definimos la estructura exacta de nuestros datos para TypeScript
 type Jugador = {
     id: string;
     nombre: string;
@@ -10,7 +10,7 @@ type Jugador = {
     imagen: string;
 };
 
-// 2. Le indicamos explícitamente a TypeScript que este arreglo contiene objetos de tipo Jugador
+//Indicamos explícitamente a TypeScript que este arreglo contiene objetos de tipo Jugador
 const jugadores: Jugador[] = [
     {
         id: '1',
@@ -46,7 +46,7 @@ const jugadores: Jugador[] = [
 
 export default function JugadoresScreen() {
 
-    // 3. ¡CORRECCIÓN! Le decimos que el parámetro 'item' es estrictamente de tipo 'Jugador'
+    //Parámetro 'item' es estrictamente de tipo 'Jugador'
     const renderItem = ({ item }: { item: Jugador }) => (
         <View style={styles.card}>
             <Image source={{ uri: item.imagen }} style={styles.cardImage} />
