@@ -55,6 +55,18 @@ export default function HomeScreen() {
       <Text style={styles.description}>
         La Selección Ecuatoriana de Fútbol representa a Ecuador en las competiciones internacionales. Sus colores tradicionales son el amarillo, azul y rojo.
       </Text>
+      {/* ----- LISTA DE INFORMACIÓN ----- */}
+      <View style={styles.infoList}>
+        <Text style={styles.listItem}>
+          <Text style={styles.label}>• Confederación:</Text> CONMEBOL
+        </Text>
+        <Text style={styles.listItem}>
+          <Text style={styles.label}>• Entrenador:</Text> Sebastián Beccacece
+        </Text>
+        <Text style={styles.listItem}>
+          <Text style={styles.label}>• Estadio - Sede:</Text> Estadio Rodrigo Paz Delgado (Quito)
+        </Text>
+      </View>
 
       {/* ----- OVERLAY DEL SPLASH ANIMADO ----- */}
       {!isSplashAnimationComplete && (
@@ -102,6 +114,22 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#444444',
     lineHeight: 24,
+  },
+
+  // ESTILOS PARA LA LISTA! ---
+  infoList: {
+    marginTop: 20,
+    alignItems: 'flex-start',
+  },
+  listItem: {
+    fontSize: 16,
+    color: '#444444',
+    marginBottom: 8,
+    lineHeight: 22,
+  },
+  label: {
+    fontWeight: 'bold',
+    color: '#002255',
   },
 
   // --- Estilos de la capa del Splash Animado ---
